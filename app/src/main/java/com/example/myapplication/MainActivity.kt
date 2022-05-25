@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -38,7 +39,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen(){
     Column (
-        //modifier = Modifier.fillMaxSize(),
+        //modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ){
@@ -65,7 +66,7 @@ fun BottomScreen(){
     Column(
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.Start,
-        modifier = Modifier.padding(30.dp),
+        modifier = Modifier.fillMaxWidth().padding(60.dp,0.dp),
 
     ){
         Row(
@@ -75,11 +76,12 @@ fun BottomScreen(){
                 painter = painterResource(R.drawable.android_logo),
                 contentDescription = "android_image",
                 modifier = Modifier.size(50.dp) ,
-                //alignment = Alignment.CenterStart,
             )
             Text(
-                "070 3519 0394",
-                fontSize = 20.sp
+                modifier = Modifier.fillMaxWidth(1f),
+                text = "070 3519 0394",
+                fontSize = 20.sp,
+                textAlign = TextAlign.End,
             )
 
         }
@@ -91,6 +93,7 @@ fun BottomScreen(){
                 modifier = Modifier.size(50.dp)
             )
             Text(
+                modifier = Modifier.fillMaxWidth(1f),
                 "b1021236@fun.ac.jp",
                 fontSize = 20.sp
             )
