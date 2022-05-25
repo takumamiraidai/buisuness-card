@@ -5,9 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -72,9 +76,9 @@ fun BottomScreen(){
         Row(
             //modifier = Modifier.padding(30.dp),
         ) {
-            Image(
-                painter = painterResource(R.drawable.android_logo),
-                contentDescription = "android_image",
+            Icon(
+                imageVector = Icons.Default.Email,
+                contentDescription = "mail-image",
                 modifier = Modifier.size(50.dp) ,
             )
             Text(
@@ -87,28 +91,31 @@ fun BottomScreen(){
         }
 
         Row() {
-            Image(
-                painter = painterResource(R.drawable.android_logo),
-                contentDescription = "android_image",
+            Icon(
+                imageVector = Icons.Default.Email,
+                contentDescription = "mail-image",
                 modifier = Modifier.size(50.dp)
             )
             Text(
                 modifier = Modifier.fillMaxWidth(1f),
-                "b1021236@fun.ac.jp",
-                fontSize = 20.sp
+                text = "b1021236@fun.ac.jp",
+                fontSize = 20.sp,
+                textAlign = TextAlign.End,
             )
 
         }
 
         Row() {
-            Image(
-                painter = painterResource(R.drawable.android_logo),
-                contentDescription = "android_image",
+            Icon(
+                imageVector = Icons.Default.Email,
+                contentDescription = "mail-image",
                 modifier = Modifier.size(50.dp)
             )
             Text(
-                "jnrwigei.com",
-                fontSize = 20.sp
+                modifier = Modifier.fillMaxWidth(1f),
+                text = "jnrwigei.com",
+                fontSize = 20.sp,
+                textAlign = TextAlign.End,
             )
 
         }
